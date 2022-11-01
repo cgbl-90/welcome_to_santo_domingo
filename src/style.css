@@ -43,6 +43,10 @@ section div {
     text-align: left;
 }
 
+.flex-center {
+    place-items: center;
+}
+
 footer {
     background-color: var(--main-clr);
     color: white;
@@ -70,6 +74,15 @@ h4 {
     line-height: 36px;
     margin: 10px 0px;
     color: var(--main-clr);
+    letter-spacing: 2px;
+}
+
+footer h4 {
+    color: white;
+}
+
+footer h5 {
+    max-width: 35ch;
 }
 
 h5 {
@@ -99,19 +112,21 @@ h5 {
 a,
 a:focus,
 a:hover,
-a:active {
+a:link,
+a:visited {
     text-decoration: none;
+    color: white;
 }
 
-a {
+.btn {
     background-color: white;
-    color: var(--main-clr);
+    color: var(--main-clr) !important;
     padding: 15px 30px;
     transition: 0.4s ease;
 }
 
-a:focus,
-a:hover {
+.btn:focus,
+.btn:hover {
     background-color: var(--main-clr);
     color: white;
 }
@@ -120,10 +135,56 @@ a:hover {
     border: 4px solid var(--main-clr);
 }
 
+#hero .btn {
+    border: none;
+}
+
 img {
     max-width: 500px;
 }
 
 .card {
-    max-width: 350px;
+    max-width: 100%;
+    padding: 30px;
+    border: 0.5px solid var(--secondary-clr);
+    border-radius: 20px;
+}
+
+@media (max-width: 1131px) {
+    .flex {
+        flex-wrap: wrap;
+    }
+
+    h1 {
+
+        font-size: 68px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h4 {
+
+        font-size: 20px;
+    }
+
+    footer h5 {
+        max-width: 35ch;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+    img {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    section {
+        min-height: fit-content;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
